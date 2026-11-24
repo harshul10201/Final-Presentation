@@ -1,0 +1,11 @@
+# Netlify configuration for MeetFlow AI frontend
+[build]
+  publish = "frontend"
+  command = ""
+
+# SPA fallback (in case of deep links)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

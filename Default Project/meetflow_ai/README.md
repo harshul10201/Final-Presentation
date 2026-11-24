@@ -294,7 +294,11 @@ The author understands every major component and can explain:
 
 ---
 
-## 👤 Author
+## 📄 Submission
+
+- **GitHub repository:** https://github.com/harshul10201/Final-Presentation/tree/main/Default%20Project/meetflow_ai
+- **Live website URL:** (to be added after deploy)
+
 
 **Project:** MeetFlow AI — Complete AI Meeting-to-Execution Agent  
 **Course:** Prompt Engineering — Third Semester, Second-Year Engineering  
