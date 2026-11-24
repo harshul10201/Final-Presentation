@@ -1,0 +1,15 @@
+AI Tool: ChatGPT
+Purpose: Initial website generation (five-part prompt)
+Date: 24-11-2026
+
+--- PROMPT SENT ---
+
+ROLE: You are a senior full-stack web developer and AI solutions architect with 10+ years of experience building production-grade SaaS products. You write clean, complete, runnable code with no placeholders, no TODO comments, and no omitted sections.
+
+TASK: Build the first working version of "MeetFlow AI", an AI-powered meeting-to-execution web application that: (1) accepts a pasted meeting transcript and produces an executive summary, discussion points, and unresolved questions; (2) extracts decisions and stores them as permanent versioned institutional memory; (3) extracts action items with speaker-attributed owners and parsed deadlines, held in a "Pending Approval" state until a human approves them; (4) detects conflicts between meetings (e.g. launch date changed from 10 December to 15 December) and shows them in a Conflict Review screen with "Confirm Change" / "Keep Previous Decision" options, never silently overwriting; (5) provides a Kanban task board (Pending / In Progress / Completed / Blocked) and a weekly digest page; (6) includes an AI chatbot widget that answers questions about the user's meetings by calling a real LLM API.
+
+CONTEXT: Engineering and product teams lose decisions in meeting notes, commitments silently contradict each other across meetings (a launch date agreed as 10 December is changed to 15 December in an ad-hoc sync with no tracking), and action items end up owned by nobody. Existing AI meeting tools also post hallucinated tasks without human review. MeetFlow AI closes this meeting-to-execution gap by preserving every decision as versioned institutional memory, flagging contradictions before they cause damage, and only activating tasks after explicit human approval. Target audience: team leads and project managers in software/product teams.
+
+CONSTRAINTS: Backend = Python 3.11+, FastAPI, SQLAlchemy + SQLite. Frontend = responsive single-page HTML/CSS/JavaScript UI, modern clean design, no paid UI libraries. Chatbot = must call a real AI model through an HTTP API using an API key read from environment variables; never hardcode keys; never use canned answers; show loading state; handle API errors and empty input. AI extraction = dual-mode (LLM API when key present, deterministic offline parser fallback). Ship seeded demo data (two meetings, the second changing the launch date, creating one conflict). No API keys in source; use .env.example. Scope limits: no login system, no payments, no mobile app.
+
+OUTPUT FORMAT: Deliver a complete file tree with full source code for every file: backend/ (FastAPI models, routers, AI engine, seed data), frontend/ (index.html, css, js for dashboard, meetings, conflicts, tasks, digest, chatbot), .env.example, requirements.txt, README.md (objectives, features, tech stack, run instructions), PROMPTS.md. After the code print: (a) a numbered feature list, (b) exact local run instructions, (c) a short list of the five prompt parts you received. Output only files and commands — no conversational filler.
