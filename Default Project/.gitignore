@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Database (auto-regenerated from seed)
+meetflow.db
+*.db
+
+# Archives / temp
+*.zip
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
